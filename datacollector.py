@@ -109,9 +109,9 @@ while capture.isOpened():
 #else go on
 last_training_dir = os.listdir("data/training/")[-1]
 last_testing_dir  = os.listdir("data/testing/")[-1]
-if not os.isdir(f"data/training/{last_training_dir}_"):
+if not os.path.isdir(f"data/training/{last_training_dir}_"):
     os.mkdir(f"data/training/{last_training_dir}_")
-if not os.isdir(f"data/testing/{last_testing_dir}_"):
+if not os.path.isdir(f"data/testing/{last_testing_dir}_"):
     os.mkdir(f"data/testing/{last_training_dir}_")
 #End of fexed bug
 
