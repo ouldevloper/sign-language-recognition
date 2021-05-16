@@ -32,6 +32,7 @@ capture = cv2.VideoCapture(0)
 while capture.isOpened():
     isCaptured, frame = capture.read()
     if isCaptured:
+        frame = frame.flip(frame,1)
         frame = cv2.resize(frame,(920,620))
         x1 = int(0.5*frame.shape[1])
         y1 = 10
